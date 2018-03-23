@@ -1,14 +1,27 @@
 
 
+var id_owner = sessionStorage.setItem('ownerId' , Math.random().toString(36).substr(7));
+var id_receiver = sessionStorage.setItem('receiverId' , Math.random().toString(36).substr(7));
+
+
+
+
 
 function messageToSend() {
-    var mensaje = $('#textBox').val();
+    
+    var message = $('#textBox').val();
+
+    var MESSAGE = {
+        owner : id_owner,
+        reciever: id_receiver,        
+        text : message 
+    }
 
     $.ajax(
         {
             type: 'POST',
             url: 'http://localhost:5000/users',
-            data: JSON.stringify(MENSAJE),
+            data: JSON.stringify(MESSAGE),
             contentType: 'application/json',
             dataType: 'json'
         }
