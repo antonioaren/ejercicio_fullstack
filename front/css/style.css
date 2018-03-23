@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif; 
 }
 
-.wrapper {
+.mainGrid {
     display: grid;
     grid-template-columns: 20% 60% 20%; 
     height: 100vh;
@@ -13,7 +13,17 @@
 }
 
 #textArea{
-    background-color: green;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+
+.grid--two-cols {
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+#messages {
+    background-color: teal;
 }
 
 #currentUser {
