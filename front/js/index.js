@@ -4,6 +4,14 @@
 function messageToSend() {
     var mensaje = $('#textBox').val();
 
+
+    var MENSAJE = {
+        owner : "" ,
+        reciever: "",
+        createAt : Date.now(),
+        text : "" 
+    }
+
     $.ajax(
         {
             type: 'POST',
