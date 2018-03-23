@@ -1,5 +1,7 @@
 
-
+sessionStorage.setItem('id' , Math.random().toString(36).substr(7));
+var data = sessionStorage.getItem('id');
+console.log(data);
 
 function messageToSend() {
     var mensaje = $('#textBox').val();
@@ -7,9 +9,8 @@ function messageToSend() {
 
     var MENSAJE = {
         owner : "" ,
-        reciever: "",
-        createAt : Date.now(),
-        text : "" 
+        reciever: "",        
+        text : mensaje 
     }
 
     $.ajax(
